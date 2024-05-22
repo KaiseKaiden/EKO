@@ -19,28 +19,6 @@ public class CameraMovement : MonoBehaviour
     float lookX;
     float lookY;
 
-    Vector3 myStaticPosition;
-    Vector3 myStaticRotation;
-
-    public enum eState
-    {
-        InGame,
-        Static
-    }
-
-    eState myState = eState.InGame;
-
-    public void SetStaticTransform(Transform aTransform)
-    {
-        myStaticPosition = aTransform.position;
-        myStaticRotation = aTransform.eulerAngles;
-    }
-
-    public void SetState(eState aState)
-    {
-        myState = aState;
-    }
-
     private void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
@@ -51,32 +29,18 @@ public class CameraMovement : MonoBehaviour
 
     void Update()
     {
-        if (myState == eState.InGame)
-        {
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
+        float inputX = Input.GetAxis("Mouse X");
+        float inputY = Input.GetAxis("Mouse Y");
 
-            float inputX = Input.GetAxis("Mouse X");
-            float inputY = Input.GetAxis("Mouse Y");
+        lookX += -inputY * myCameraSpeed * Time.deltaTime;
+        lookY += inputX * myCameraSpeed * Time.deltaTime;
+        lookX = Mathf.Clamp(lookX, -myClampAngle, myClampAngle);
+        transform.eulerAngles = new Vector3(lookX, lookY, 0.0f);
 
-            lookX += -inputY * myCameraSpeed * Time.deltaTime;
-            lookY += inputX * myCameraSpeed * Time.deltaTime;
-            lookX = Mathf.Clamp(lookX, -myClampAngle, myClampAngle);
-            transform.eulerAngles = new Vector3(lookX, lookY, 0.0f);
+        SetCurrentDistance();
 
-            SetCurrentDistance();
-
-            Vector3 centerPosition = Vector3.up * myUpDistance + transform.right * myRightDistance;
-            transform.localPosition = centerPosition - transform.forward * myCurrentDistance;
-        }
-        else
-        {
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
-
-            transform.position = myStaticPosition;
-            transform.eulerAngles = myStaticRotation;
-        }
+        Vector3 centerPosition = Vector3.up * myUpDistance + transform.right * myRightDistance;
+        transform.localPosition = centerPosition - transform.forward * myCurrentDistance;
     }
 
     void SetCurrentDistance()
