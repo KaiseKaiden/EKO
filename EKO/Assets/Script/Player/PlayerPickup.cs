@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerPickup : MonoBehaviour
@@ -9,6 +10,7 @@ public class PlayerPickup : MonoBehaviour
     Transform myItemTransform;
     Item myItemComponent;
 
+    [SerializeField] LayerMask myItemLayer;
     [SerializeField] float myInteractRange;
     float myInteractRangeSqr;
 
@@ -43,7 +45,7 @@ public class PlayerPickup : MonoBehaviour
 
     void Pickup()
     {
-        GameObject closest = null;
+        /*GameObject closest = null;
         float closestDistanceSqr = float.MaxValue;
         foreach (GameObject i in GameObject.FindGameObjectsWithTag("Item"))
         {
@@ -69,6 +71,28 @@ public class PlayerPickup : MonoBehaviour
             myItemTransform.SetParent(myHandTransform);
             myItemTransform.position = myHandTransform.position;
             myItemTransform.rotation = myHandTransform.rotation;
+        }*/
+
+        RaycastHit hit;
+        if (Physics.Raycast(myCameraTransform.position, myCameraTransform.forward, out hit, myItemLayer))
+        {
+            float distanceSqr = (hit.point - transform.position).sqrMagnitude;
+            if (distanceSqr > myInteractRangeSqr)
+            {
+                return;
+            }
+
+            Item item;
+            if (hit.transform.TryGetComponent<Item>(out item))
+            {
+                myItemComponent = item;
+                myItemTransform = hit.transform;
+                myInHand = true;
+
+                myItemTransform.SetParent(myHandTransform);
+                myItemTransform.position = myHandTransform.position;
+                myItemTransform.rotation = myHandTransform.rotation;
+            }
         }
     }
 
