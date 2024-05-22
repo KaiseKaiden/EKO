@@ -925,14 +925,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4862632153626131842, guid: 985a4fb0144990146a46e8307bec1706, type: 3}
-      propertyPath: m_TargetTexture
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5151296192799785497, guid: 985a4fb0144990146a46e8307bec1706, type: 3}
-      propertyPath: m_TargetTexture
-      value: 
-      objectReference: {fileID: 8400000, guid: cf30cda799d8edd459842c81ec1f7dc2, type: 2}
     - target: {fileID: 5243804072229592866, guid: 985a4fb0144990146a46e8307bec1706, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -977,10 +969,6 @@ PrefabInstance:
       propertyPath: myTarget
       value: 
       objectReference: {fileID: 1460406384}
-    - target: {fileID: 8828713250336266670, guid: 985a4fb0144990146a46e8307bec1706, type: 3}
-      propertyPath: m_TargetTexture
-      value: 
-      objectReference: {fileID: 8400000, guid: 88e720124b1561e40947637fa98e838a, type: 2}
     - target: {fileID: 9162993617058013935, guid: 985a4fb0144990146a46e8307bec1706, type: 3}
       propertyPath: m_Name
       value: CameraHolder
