@@ -4,15 +4,31 @@ using UnityEngine;
 
 public class Item : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] Transform myTargetTransform;
+    [SerializeField] float myInteractDistance;
+    float myInteractDistanceSqr;
+
     void Start()
     {
-        
+        myInteractDistanceSqr = myInteractDistance * myInteractDistance;
     }
 
-    // Update is called once per frame
-    void Update()
+    public bool UseItem()
     {
-        
+        float distanceSqr = (transform.position - myTargetTransform.position).sqrMagnitude;
+        if (distanceSqr < myInteractDistanceSqr)
+        {
+            Responder responder;
+            if (myTargetTransform.TryGetComponent<Responder>(out responder))
+            {
+                responder.Respond();
+            }
+
+            Destroy(gameObject);
+
+            return true;
+        }
+
+        return false;
     }
 }
