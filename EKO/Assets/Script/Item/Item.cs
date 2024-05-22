@@ -4,15 +4,56 @@ using UnityEngine;
 
 public class Item : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] Transform myTargetTransform;
+    [SerializeField] float myInteractDistance;
+    float myInteractDistanceSqr;
+
+    Transform myCameraTransform;
+
     void Start()
     {
-        
+        myCameraTransform = Camera.main.transform;
+
+        myInteractDistanceSqr = myInteractDistance * myInteractDistance;
     }
 
-    // Update is called once per frame
-    void Update()
+    public bool UseItem()
     {
-        
+        //float distanceSqr = (transform.position - myTargetTransform.position).sqrMagnitude;
+        //if (distanceSqr < myInteractDistanceSqr)
+        //{
+        //    Responder responder;
+        //    if (myTargetTransform.TryGetComponent<Responder>(out responder))
+        //    {
+        //        responder.Respond();
+        //    }
+
+        //    Destroy(gameObject);
+
+        //    return true;
+        //}
+
+        RaycastHit hit;
+        if (Physics.Raycast(myCameraTransform.position, myCameraTransform.forward, out hit))
+        {
+            Responder responder;
+            if (hit.transform.TryGetComponent<Responder>(out responder))
+            {
+                Vector3 playerPos = transform.position;
+                playerPos.y = myCameraTransform.position.y;
+
+                float distanceSqr = (playerPos - hit.point).sqrMagnitude;
+                if (distanceSqr < myInteractDistanceSqr)
+                {
+                    responder.Respond();
+
+                    Destroy(gameObject);
+
+                    return true;
+                }
+            }
+        }
+
+        return false;
     }
 }

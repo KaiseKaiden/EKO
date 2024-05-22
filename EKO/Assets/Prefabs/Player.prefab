@@ -61,6 +61,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15d55361a030c1439896b224b0fdd0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myHandTransform: {fileID: 603131750296410566}
+  myItemLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  myInteractRange: 2
 --- !u!143 &7871544831907275197
 CharacterController:
   m_ObjectHideFlags: 0
