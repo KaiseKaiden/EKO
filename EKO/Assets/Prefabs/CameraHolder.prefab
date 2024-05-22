@@ -184,7 +184,11 @@ GameObject:
   m_Component:
   - component: {fileID: 4638096397870030778}
   - component: {fileID: 8828713250336266670}
+<<<<<<< Updated upstream
   - component: {fileID: 7387320266288892129}
+=======
+  - component: {fileID: 3899233838341504939}
+>>>>>>> Stashed changes
   m_Layer: 0
   m_Name: PixelCameraItem
   m_TagString: Untagged
@@ -259,7 +263,11 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+<<<<<<< Updated upstream
 --- !u!114 &7387320266288892129
+=======
+--- !u!114 &3899233838341504939
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -510,7 +518,7 @@ MonoBehaviour:
   m_RendererIndex: -1
   m_VolumeLayerMask:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 129
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
   m_RenderPostProcessing: 0
@@ -618,7 +626,11 @@ GameObject:
   - component: {fileID: 4862632153626131842}
   - component: {fileID: 465535377834386496}
   - component: {fileID: 3821271103636730333}
+<<<<<<< Updated upstream
   - component: {fileID: 590601618655630117}
+=======
+  - component: {fileID: 8212626733549039166}
+>>>>>>> Stashed changes
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -722,7 +734,11 @@ MonoBehaviour:
   myCameraLayer:
     serializedVersion: 2
     m_Bits: 55
+<<<<<<< Updated upstream
 --- !u!114 &590601618655630117
+=======
+--- !u!114 &8212626733549039166
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
