@@ -639,7 +639,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 590601618655630117, guid: 985a4fb0144990146a46e8307bec1706, type: 3}
       propertyPath: m_Cameras.Array.size
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 590601618655630117, guid: 985a4fb0144990146a46e8307bec1706, type: 3}
       propertyPath: m_Cameras.Array.data[1]
