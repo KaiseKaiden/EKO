@@ -3,7 +3,17 @@ guid: 665af94a2ec26e742b24f67c9b8a16e9
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Man
+    second: {fileID: 2100000, guid: fb3439ebd4498bc46a1051661ce351fe, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Tentacle_1024
+    second: {fileID: 2100000, guid: 73b7e9d0f8a14224688b840c0f22e14f, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
