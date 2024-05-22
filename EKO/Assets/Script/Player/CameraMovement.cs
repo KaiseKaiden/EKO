@@ -45,19 +45,20 @@ public class CameraMovement : MonoBehaviour
         Vector3 centerPosition = Vector3.up * myUpDistance + transform.right * myRightDistance;
 
         RaycastHit hit;
-        if (Physics.Raycast(centerPosition, -transform.forward, out hit, myMaxCameraDistance, myCameraLayer))
+
+        if (Physics.Raycast(transform.parent.transform.position + centerPosition, -transform.forward, out hit, myMaxCameraDistance, myCameraLayer))
         {
             myDeciredDistance = hit.distance;
-            //if (myCurrentDistance > myDeciredDistance)
-            //{
-            //    myCurrentDistance = myDeciredDistance;
-            //}
+            if (myCurrentDistance > myDeciredDistance)
+            {
+                myCurrentDistance = myDeciredDistance;
+            }
         }
         else
         {
             myDeciredDistance = myMaxCameraDistance;
         }
 
-        myCurrentDistance = myDeciredDistance;// Mathf.Lerp(myCurrentDistance, myDeciredDistance, 2.0f * Time.deltaTime);
+        myCurrentDistance = Mathf.Lerp(myCurrentDistance, myDeciredDistance, 2.0f * Time.deltaTime);
     }
 }
