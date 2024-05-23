@@ -34,7 +34,7 @@ public class SceneLoaderOnTrigger : MonoBehaviour
             transitionCanvas.SetActive(true);
             transitionAnimator.SetBool("TriggerBlackFade", true);
 
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(0.9f);
 
             transitionAnimator.SetBool("TriggerBlackFade", false);
             SceneManager.LoadScene(sceneToLoad);
@@ -53,7 +53,7 @@ public class SceneLoaderOnTrigger : MonoBehaviour
         transitionCanvas.SetActive(true);
         transitionAnimator.SetBool("TriggerWhiteFade",true);
 
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.9f);
 
         transitionAnimator.SetBool("TriggerWhiteFade", false);
         transitionCanvas.SetActive(false);
