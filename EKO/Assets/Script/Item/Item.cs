@@ -5,6 +5,7 @@ using UnityEngine;
 public class Item : MonoBehaviour
 {
     [SerializeField] Sprite myImage;
+    [SerializeField] Responder myTargetResponder;
 
     [SerializeField] Transform myTargetTransform;
     [SerializeField] float myInteractDistance;
@@ -39,11 +40,12 @@ public class Item : MonoBehaviour
                 float distanceSqr = (playerPos - hit.point).sqrMagnitude;
                 if (distanceSqr < myInteractDistanceSqr)
                 {
-                    responder.Respond();
+                    if (responder.Respond(myTargetResponder))
+                    {
+                        Destroy(gameObject);
 
-                    Destroy(gameObject);
-
-                    return true;
+                        return true;
+                    }
                 }
             }
         }

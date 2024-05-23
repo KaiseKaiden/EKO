@@ -4590,6 +4590,10 @@ PrefabInstance:
       value: Knife
       objectReference: {fileID: 0}
     - target: {fileID: 3008145957852509884, guid: 7a759bec538cf25468d6b58111eb536c, type: 3}
+      propertyPath: myTargetResponder
+      value: 
+      objectReference: {fileID: 7211547155818035894}
+    - target: {fileID: 3008145957852509884, guid: 7a759bec538cf25468d6b58111eb536c, type: 3}
       propertyPath: myTargetTransform
       value: 
       objectReference: {fileID: 4912330357242945364}
@@ -7948,6 +7952,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3202945292896803144, guid: d2e0a9aa02092b44b8515ed92060a7c1, type: 3}
+      propertyPath: myTargetResponder
+      value: 
+      objectReference: {fileID: 1004605580}
     - target: {fileID: 3202945292896803144, guid: d2e0a9aa02092b44b8515ed92060a7c1, type: 3}
       propertyPath: myTargetTransform
       value: 
