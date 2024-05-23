@@ -27,8 +27,10 @@ public class PlayerPickup : MonoBehaviour
     {
         if (Input.GetButtonDown("Interact"))
         {
+            
             if (!myInHand)
             {
+                
                 Pickup();
             }
             else
