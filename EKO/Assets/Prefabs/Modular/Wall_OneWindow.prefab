@@ -158,6 +158,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall_OneWindow
       objectReference: {fileID: 0}
+    - target: {fileID: 8029106800918022278, guid: 03c13f4b29c32ae41ba8598eb72e95a9, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 65110f79e132138409c317c227bb4dd8, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
