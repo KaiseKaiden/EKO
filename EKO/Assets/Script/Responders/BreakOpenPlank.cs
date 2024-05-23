@@ -6,8 +6,16 @@ public class BreakOpenPlank : Responder
 {
     public GameObject myCrowbar;
 
-    public override void Respond()
+    public override bool Respond(Responder aResponder)
     {
+        if (this != aResponder)
+        {
+            // CANT USE HERE
+
+            return false;
+        }
+
         myCrowbar.SetActive(true);
+        return true;
     }
 }

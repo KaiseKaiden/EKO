@@ -11,7 +11,7 @@ public class DestroyPlank : MonoBehaviour
     {
         Destroy(myPlank);
 
-        myResponder.Respond();
+        myResponder.Respond(myResponder);
     }
 
     public void DestroyMyself()
