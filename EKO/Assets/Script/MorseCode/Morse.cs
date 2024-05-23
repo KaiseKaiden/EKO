@@ -19,8 +19,8 @@ public class Morse : MonoBehaviour
 
     bool myIsLit = true;
     float myTime;
-    int myLetterIndex;
-    int myBlinkIndex;
+    int myLetterIndex = 0;
+    int myBlinkIndex = 0;
 
     private void Start()
     {
@@ -41,13 +41,13 @@ public class Morse : MonoBehaviour
 
                 myBlinkIndex++;
 
-                if (myBlinkIndex >= myLetters[myLetterIndex].Length - 1)
+                if (myBlinkIndex > myLetters[myLetterIndex].Length - 1)
                 {
                     myBlinkIndex = 0;
                     myLetterIndex++;
                     myTime = myTimeBetweenLetters;
 
-                    if (myLetterIndex >= myLetters.Count - 1)
+                    if (myLetterIndex > myLetters.Count - 1)
                     {
                         myLetterIndex = 0;
                         myTime = myTimeBetweenRestart;
