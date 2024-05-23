@@ -56,6 +56,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Keycard
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: be23a95ed39a48f429665805c751dfc4, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -135,5 +139,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9386aff62d21984cb38228d49b03916, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myImage: {fileID: 0}
   myTargetTransform: {fileID: 0}
   myInteractDistance: 0

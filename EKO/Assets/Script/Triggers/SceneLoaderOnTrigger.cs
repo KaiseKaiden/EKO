@@ -66,7 +66,6 @@ public class SceneLoaderOnTrigger : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             transitionCanvas.SetActive(false);
         }
-
         else
         {
             Debug.LogWarning("Scene " + SceneManager.GetActiveScene().name + " cannot be loaded. Please check the scene name and ensure it is added to the Build Settings.");
