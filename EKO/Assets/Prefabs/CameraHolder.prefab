@@ -416,6 +416,8 @@ MonoBehaviour:
   myRightDistance: 0.6
   myUpDistance: 1.7
   myClampAngle: 80
+  myOffsetMax: 4
+  myOffsetSpeed: 0.2
   myCameraLayer:
     serializedVersion: 2
     m_Bits: 55
