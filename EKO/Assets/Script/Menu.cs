@@ -26,12 +26,12 @@ public class Menu : MonoBehaviour
         transitionAnimator.SetBool("TriggerBlackFade",true);
         Debug.Log("Fading in");
 
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.9f);
 
         Debug.Log("Game is Playing");
         transitionAnimator.SetBool("TriggerBlackFade", false);
         transitionCanvas.SetActive(false);
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene("Train1");
       
     }
 
@@ -56,18 +56,19 @@ public class Menu : MonoBehaviour
         transitionAnimator.SetTrigger("TriggerBlackFade");
         Debug.Log("Game is Quitting");
 
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.9f);
 
         transitionCanvas.SetActive(false);
         Application.Quit();
     }
+
 
     IEnumerator TransitionWhite()
     {
         transitionCanvas.SetActive(true);
         transitionAnimator.SetTrigger("TriggerWhiteFade");
 
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.9f);
 
         transitionCanvas.SetActive(false);
     }
