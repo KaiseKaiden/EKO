@@ -9054,6 +9054,91 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4749954838564951003, guid: 8b87033e24222e8449857244f4af26a6, type: 3}
   m_PrefabInstance: {fileID: 768439868}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1905573325
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2753843681177478567, guid: 85c01d7400e051f48a8428b8abd5058c, type: 3}
+      propertyPath: myImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 6d6e20efd82eee444b419f77a454667b, type: 3}
+    - target: {fileID: 5071594332252989118, guid: 85c01d7400e051f48a8428b8abd5058c, type: 3}
+      propertyPath: m_Name
+      value: Paper
+      objectReference: {fileID: 0}
+    - target: {fileID: 6413747988585671184, guid: 85c01d7400e051f48a8428b8abd5058c, type: 3}
+      propertyPath: m_Size.x
+      value: 0.023667868
+      objectReference: {fileID: 0}
+    - target: {fileID: 6413747988585671184, guid: 85c01d7400e051f48a8428b8abd5058c, type: 3}
+      propertyPath: m_Size.y
+      value: 0.025573542
+      objectReference: {fileID: 0}
+    - target: {fileID: 6413747988585671184, guid: 85c01d7400e051f48a8428b8abd5058c, type: 3}
+      propertyPath: m_Size.z
+      value: 0.0024634704
+      objectReference: {fileID: 0}
+    - target: {fileID: 6413747988585671184, guid: 85c01d7400e051f48a8428b8abd5058c, type: 3}
+      propertyPath: m_Center.x
+      value: 0.00083336805
+      objectReference: {fileID: 0}
+    - target: {fileID: 6413747988585671184, guid: 85c01d7400e051f48a8428b8abd5058c, type: 3}
+      propertyPath: m_Center.y
+      value: 0.00060214545
+      objectReference: {fileID: 0}
+    - target: {fileID: 6413747988585671184, guid: 85c01d7400e051f48a8428b8abd5058c, type: 3}
+      propertyPath: m_Center.z
+      value: 0.00013584987
+      objectReference: {fileID: 0}
+    - target: {fileID: 9162860758291436917, guid: 85c01d7400e051f48a8428b8abd5058c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -10.568
+      objectReference: {fileID: 0}
+    - target: {fileID: 9162860758291436917, guid: 85c01d7400e051f48a8428b8abd5058c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 7.533545
+      objectReference: {fileID: 0}
+    - target: {fileID: 9162860758291436917, guid: 85c01d7400e051f48a8428b8abd5058c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -16.582
+      objectReference: {fileID: 0}
+    - target: {fileID: 9162860758291436917, guid: 85c01d7400e051f48a8428b8abd5058c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.67522293
+      objectReference: {fileID: 0}
+    - target: {fileID: 9162860758291436917, guid: 85c01d7400e051f48a8428b8abd5058c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.675223
+      objectReference: {fileID: 0}
+    - target: {fileID: 9162860758291436917, guid: 85c01d7400e051f48a8428b8abd5058c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.20993811
+      objectReference: {fileID: 0}
+    - target: {fileID: 9162860758291436917, guid: 85c01d7400e051f48a8428b8abd5058c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.20993812
+      objectReference: {fileID: 0}
+    - target: {fileID: 9162860758291436917, guid: 85c01d7400e051f48a8428b8abd5058c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 9162860758291436917, guid: 85c01d7400e051f48a8428b8abd5058c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9162860758291436917, guid: 85c01d7400e051f48a8428b8abd5058c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 34.543
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 85c01d7400e051f48a8428b8abd5058c, type: 3}
 --- !u!4 &1913084118 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7924440868952631765, guid: 986d87fb4d7e5af45a900f83ecb935ea, type: 3}
@@ -10598,4 +10683,5 @@ SceneRoots:
   - {fileID: 872131774}
   - {fileID: 55043976}
   - {fileID: 1048561746}
+  - {fileID: 1905573325}
   - {fileID: 256448008}
