@@ -1,11 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine.UI;
 using UnityEngine;
 
 public class Item : MonoBehaviour
 {
-    [SerializeField] Image myImage;
+    [SerializeField] Sprite myImage;
 
     [SerializeField] Transform myTargetTransform;
     [SerializeField] float myInteractDistance;
@@ -62,7 +61,7 @@ public class Item : MonoBehaviour
         myRigidbody.isKinematic = true;
     }
 
-    public Image GetImage()
+    public Sprite GetImage()
     {
         return myImage;
     }
