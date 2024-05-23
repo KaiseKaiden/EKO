@@ -49,9 +49,13 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: be23a95ed39a48f429665805c751dfc4, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 37b6ff42070de6549bc67e0f581beb3a, type: 2}
+    - target: {fileID: -7511558181221131132, guid: be23a95ed39a48f429665805c751dfc4, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
-      objectReference: {fileID: 2100000, guid: 6318f26a5736ee1468dbeff9a1b30fa1, type: 2}
+      objectReference: {fileID: 2100000, guid: 76ee9027267996143b7a6630a29b233e, type: 2}
     - target: {fileID: 919132149155446097, guid: be23a95ed39a48f429665805c751dfc4, type: 3}
       propertyPath: m_Name
       value: Keycard
@@ -140,5 +144,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myImage: {fileID: 0}
+  myTargetResponder: {fileID: 0}
   myTargetTransform: {fileID: 0}
   myInteractDistance: 0
