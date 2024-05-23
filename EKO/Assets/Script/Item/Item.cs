@@ -40,7 +40,7 @@ public class Item : MonoBehaviour
                 float distanceSqr = (playerPos - hit.point).sqrMagnitude;
                 if (distanceSqr < myInteractDistanceSqr)
                 {
-                    if (responder.Respond(myTargetResponder))
+                    if (responder.Respond(myTargetResponder, this))
                     {
                         Destroy(gameObject);
 

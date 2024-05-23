@@ -6,7 +6,7 @@ public class Door : Responder
 {
     [SerializeField] private Animator animDoor = null;
 
-    public override bool Respond(Responder aResponder)
+    public override bool Respond(Responder aResponder, Item aItem)
     {
         if (this != aResponder)
         {

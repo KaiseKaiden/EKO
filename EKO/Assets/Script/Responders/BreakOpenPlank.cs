@@ -6,7 +6,7 @@ public class BreakOpenPlank : Responder
 {
     public GameObject myCrowbar;
 
-    public override bool Respond(Responder aResponder)
+    public override bool Respond(Responder aResponder, Item aItem)
     {
         if (this != aResponder)
         {

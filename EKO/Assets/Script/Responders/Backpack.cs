@@ -6,7 +6,7 @@ public class Backpack : Responder
 {
     [SerializeField] GameObject myKeyPrefab;
 
-    public override bool Respond(Responder aResponder)
+    public override bool Respond(Responder aResponder, Item aItem)
     {
         if (this != aResponder)
         {
