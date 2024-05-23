@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 9218246320783187977}
   - component: {fileID: 7281571064701622422}
   - component: {fileID: 5150698733763735335}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Key
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,6 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9386aff62d21984cb38228d49b03916, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myImage: {fileID: 0}
   myTargetTransform: {fileID: 0}
   myInteractDistance: 0
 --- !u!65 &5150698733763735335
