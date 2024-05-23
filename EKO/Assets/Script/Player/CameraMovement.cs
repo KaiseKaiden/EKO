@@ -19,28 +19,58 @@ public class CameraMovement : MonoBehaviour
     float lookX;
     float lookY;
 
+    public enum eState
+    {
+        InGame,
+        Static
+    }
+
+    eState myState = eState.InGame;
+    Transform myStaticTransform;
+
+    public void SetState(eState aState)
+    {
+        myState = aState;
+    }
+
+    public void SetStaticTransform(Transform aTransform)
+    {
+        myStaticTransform = aTransform;
+    }
+
     private void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
-
         myCurrentDistance = myMaxCameraDistance;
     }
 
     void Update()
     {
-        float inputX = Input.GetAxis("Mouse X");
-        float inputY = Input.GetAxis("Mouse Y");
+        if (myState == eState.InGame)
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
 
-        lookX += -inputY * myCameraSpeed * Time.deltaTime;
-        lookY += inputX * myCameraSpeed * Time.deltaTime;
-        lookX = Mathf.Clamp(lookX, -myClampAngle, myClampAngle);
-        transform.eulerAngles = new Vector3(lookX, lookY, 0.0f);
+            float inputX = Input.GetAxis("Mouse X");
+            float inputY = Input.GetAxis("Mouse Y");
 
-        SetCurrentDistance();
+            lookX += -inputY * myCameraSpeed * Time.deltaTime;
+            lookY += inputX * myCameraSpeed * Time.deltaTime;
+            lookX = Mathf.Clamp(lookX, -myClampAngle, myClampAngle);
+            transform.eulerAngles = new Vector3(lookX, lookY, 0.0f);
 
-        Vector3 centerPosition = Vector3.up * myUpDistance + transform.right * myRightDistance;
-        transform.localPosition = centerPosition - transform.forward * myCurrentDistance;
+            SetCurrentDistance();
+
+            Vector3 centerPosition = Vector3.up * myUpDistance + transform.right * myRightDistance;
+            transform.localPosition = centerPosition - transform.forward * myCurrentDistance;
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+
+            transform.position = myStaticTransform.position;
+            transform.rotation = myStaticTransform.rotation;
+        }
     }
 
     void SetCurrentDistance()
