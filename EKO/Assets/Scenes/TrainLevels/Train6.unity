@@ -4693,6 +4693,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Backdrop
       objectReference: {fileID: 0}
+    - target: {fileID: 7229436180603895558, guid: 0fc2fde5e93e7b741ba44fe020329b5f, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 4.2355
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
