@@ -10,29 +10,21 @@ public class Item : MonoBehaviour
 
     Transform myCameraTransform;
 
+    bool myIsDropping;
+
+    Rigidbody myRigidbody;
+
     void Start()
     {
         myCameraTransform = Camera.main.transform;
 
         myInteractDistanceSqr = myInteractDistance * myInteractDistance;
+
+        myRigidbody = GetComponent<Rigidbody>();
     }
 
     public bool UseItem()
     {
-        //float distanceSqr = (transform.position - myTargetTransform.position).sqrMagnitude;
-        //if (distanceSqr < myInteractDistanceSqr)
-        //{
-        //    Responder responder;
-        //    if (myTargetTransform.TryGetComponent<Responder>(out responder))
-        //    {
-        //        responder.Respond();
-        //    }
-
-        //    Destroy(gameObject);
-
-        //    return true;
-        //}
-
         RaycastHit hit;
         if (Physics.Raycast(myCameraTransform.position, myCameraTransform.forward, out hit))
         {
@@ -55,5 +47,20 @@ public class Item : MonoBehaviour
         }
 
         return false;
+    }
+
+    public void DropItem()
+    {
+        myRigidbody.isKinematic = false;
+    }
+
+    public void PickupItem()
+    {
+        myRigidbody.isKinematic = true;
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        myRigidbody.isKinematic = true;
     }
 }

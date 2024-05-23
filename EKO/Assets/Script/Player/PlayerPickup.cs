@@ -47,34 +47,6 @@ public class PlayerPickup : MonoBehaviour
 
     void Pickup()
     {
-        /*GameObject closest = null;
-        float closestDistanceSqr = float.MaxValue;
-        foreach (GameObject i in GameObject.FindGameObjectsWithTag("Item"))
-        {
-            if (i.transform == myItemTransform)
-            {
-                continue;
-            }
-
-            float distanceSqr = (i.transform.position - transform.position).sqrMagnitude;
-            if (distanceSqr < myInteractRangeSqr)
-            {
-                closest = i;
-                closestDistanceSqr = distanceSqr;
-            }
-        }
-
-        if (closest != null)
-        {
-            closest.TryGetComponent<Item>(out myItemComponent);
-            myItemTransform = closest.transform;
-            myInHand = true;
-
-            myItemTransform.SetParent(myHandTransform);
-            myItemTransform.position = myHandTransform.position;
-            myItemTransform.rotation = myHandTransform.rotation;
-        }*/
-
         RaycastHit hit;
         if (Physics.Raycast(myCameraTransform.position, myCameraTransform.forward, out hit, myItemLayer))
         {
@@ -94,12 +66,16 @@ public class PlayerPickup : MonoBehaviour
                 myItemTransform.SetParent(myHandTransform);
                 myItemTransform.position = myHandTransform.position;
                 myItemTransform.rotation = myHandTransform.rotation;
+
+                myItemComponent.PickupItem();
             }
         }
     }
 
     void Putdown()
     {
+        myItemComponent.DropItem();
+
         myInHand = false;
         myItemComponent = null;
         myItemTransform.SetParent(null);
