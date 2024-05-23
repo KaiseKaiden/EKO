@@ -7,6 +7,10 @@ public class Numpad : MonoBehaviour
 {
     [SerializeField] NumpadButton[] myButtons;
     [SerializeField] Transform myStaticCameraTransform;
+    [SerializeField] MeshRenderer myLampMeshRenderer;
+    [SerializeField] Material mySuccessMaterial;
+
+    [SerializeField] Responder myResponder;
 
     [SerializeField] string myCode;
     int myCodeIndex;
@@ -50,6 +54,9 @@ public class Numpad : MonoBehaviour
             {
                 myIsDone = true;
                 Exit();
+
+                myLampMeshRenderer.material = mySuccessMaterial;
+                myResponder.Respond();
             }
         }
         else
