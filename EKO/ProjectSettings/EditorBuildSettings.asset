@@ -15,6 +15,24 @@ EditorBuildSettings:
     path: Assets/Scenes/TrainLevels/Train2.unity
     guid: 45853c842f0fcdb48b62d86389f5df5c
   - enabled: 1
+    path: Assets/Scenes/TrainLevels/Train3.unity
+    guid: f005895939025f04ba1b00b6a33e9f9e
+  - enabled: 1
+    path: Assets/Scenes/TrainLevels/Train4.unity
+    guid: c798f0c6a5f3de746b10bb62e90ff68a
+  - enabled: 1
+    path: Assets/Scenes/TrainLevels/Train5.unity
+    guid: 01e725c7632ce1b4fb4fc0ce83d521db
+  - enabled: 1
+    path: Assets/Scenes/TrainLevels/Train6.unity
+    guid: 01fc4468595720f4c94f6625edc05467
+  - enabled: 1
+    path: Assets/Scenes/TrainLevels/Train7.unity
+    guid: cc28d2715a2230d4d981e42fff63bb36
+  - enabled: 1
+    path: Assets/Scenes/TrainLevels/Train8.unity
+    guid: b790c7ba86aac124993f4bc468dffa37
+  - enabled: 1
     path: Assets/Scenes/FransTest.unity
     guid: 78d5337ba396a144fa1e5186c7ef7228
   m_configObjects: {}

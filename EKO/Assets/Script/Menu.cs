@@ -6,8 +6,10 @@ using UnityEngine.SceneManagement;
 public class Menu : MonoBehaviour
 {
     [SerializeField] GameObject credits;
+    [SerializeField] GameObject creditsButtons;
     [SerializeField] Animator transitionAnimator;
     [SerializeField] GameObject transitionCanvas;
+
 
     private void Start()
     {
@@ -37,12 +39,14 @@ public class Menu : MonoBehaviour
 
     public void OpenCredits()
     {
-        credits.SetActive(true);    
+        credits.SetActive(true);  
+        creditsButtons.SetActive(true);
     }
 
     public void CloseCredits()
     {
         credits.SetActive(false);
+        creditsButtons.SetActive(false);
     }
 
     public void QuitGame()
