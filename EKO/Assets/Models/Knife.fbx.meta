@@ -3,7 +3,12 @@ guid: 6a1e52229b63fc443b832aecadc9a723
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_KNife
+    second: {fileID: 2100000, guid: 00506cfc906fb0d429a1f831ba8417f5, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
