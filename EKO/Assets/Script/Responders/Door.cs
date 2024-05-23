@@ -8,19 +8,6 @@ public class Door : Responder
 
     public override void Respond()
     {
-        animDoor.Play("DoorTest");
+        animDoor.SetTrigger("Open");
     }
-
-    void Update()
-    {
-        // Example of playing a sound on a key press
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            animDoor.Play("DoorTest");
-            AudioHandler.Instance.PlaySound("DoorOpen");
-        }
-    }
-
-
-
 }
