@@ -12,6 +12,8 @@ public class PlayerMovement : MonoBehaviour
 
     Vector3 myDeciredForward;
 
+    [SerializeField] Animator myAnimator;
+
     void Start()
     {
         myCameraTransform = Camera.main.transform;
@@ -39,6 +41,7 @@ public class PlayerMovement : MonoBehaviour
         Vector3 direction = ((right * inputX) + (forward * inputY)).normalized;
 
         myCharacterController.Move(direction * myWalkingSpeed * Time.deltaTime);
+        myAnimator.SetFloat("movement", (direction * myWalkingSpeed).magnitude);
 
         if (Mathf.Abs(inputX) > 0 || Mathf.Abs(inputY) > 0)
         {
