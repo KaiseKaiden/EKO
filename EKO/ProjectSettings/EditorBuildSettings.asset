@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TrainLevels/Train2.unity
     guid: b36dc5c60be60634f8f5af3ea8b222ad
+  - enabled: 1
+    path: Assets/Scenes/FransTest.unity
+    guid: 78d5337ba396a144fa1e5186c7ef7228
   m_configObjects: {}

@@ -7,8 +7,33 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: M_Glass
+    second: {fileID: 2100000, guid: df0133a5878bed740a367f2c4c87971e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal1
+    second: {fileID: 2100000, guid: 07db84e0fb14b6340b8adab8cca9b351, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Plastic1
+    second: {fileID: 2100000, guid: 37b6ff42070de6549bc67e0f581beb3a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Trims
+    second: {fileID: 2100000, guid: d66fe3fc262a782419485de8ceac4db4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: standardSurface1.002
-    second: {fileID: 2100000, guid: 3975bf26dabdf7343b7bbd13af1b0248, type: 2}
+    second: {fileID: 2100000, guid: 37b6ff42070de6549bc67e0f581beb3a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: standardSurface1.003
+    second: {fileID: 2100000, guid: 07db84e0fb14b6340b8adab8cca9b351, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
