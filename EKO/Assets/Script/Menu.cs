@@ -11,22 +11,28 @@ public class Menu : MonoBehaviour
 
     private void Start()
     {
-        transitionAnimator = GetComponent<Animator>();
-
+        transitionAnimator = transitionCanvas.GetComponentInChildren<Animator>();
     }
 
+    public void PlayGame()
+    {
+        StartCoroutine(Play());
+    }
  
-    public IEnumerator PlayGame()
+    public IEnumerator Play()
     {
         transitionCanvas.SetActive(true);
-        transitionAnimator.SetTrigger("TriggerBlackFade");
+
+        transitionAnimator.SetBool("TriggerBlackFade",true);
         Debug.Log("Fading in");
 
         yield return new WaitForSeconds(1);
 
         Debug.Log("Game is Playing");
-        SceneManager.LoadScene("Level1");
+        transitionAnimator.SetBool("TriggerBlackFade", false);
         transitionCanvas.SetActive(false);
+        SceneManager.LoadScene("Level1");
+      
     }
 
     public void OpenCredits()
@@ -41,19 +47,21 @@ public class Menu : MonoBehaviour
 
     public void QuitGame()
     {
-        Debug.Log("Game is Quitting");
-        Application.Quit();
+        StartCoroutine(Quit());
     }
 
-    IEnumerator TransitionBlack()
+    public IEnumerator Quit()
     {
         transitionCanvas.SetActive(true);
         transitionAnimator.SetTrigger("TriggerBlackFade");
+        Debug.Log("Game is Quitting");
 
         yield return new WaitForSeconds(1);
 
         transitionCanvas.SetActive(false);
+        Application.Quit();
     }
+
     IEnumerator TransitionWhite()
     {
         transitionCanvas.SetActive(true);
