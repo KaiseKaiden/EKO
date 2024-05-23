@@ -2031,6 +2031,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2830804932925933291, guid: 0f1ad148acd72ab428044b1d9874db37, type: 3}
   m_PrefabInstance: {fileID: 1496935139}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &405583333 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6506759138664520136, guid: 0f1ad148acd72ab428044b1d9874db37, type: 3}
+  m_PrefabInstance: {fileID: 1496935139}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 405583332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d8d5541f6c7d804ab5fd16c1fe7917b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &411461587 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1950715105387539941, guid: 6d97899674435dd4ab27ed42e4cf0693, type: 3}
@@ -7925,6 +7936,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crowbar
       objectReference: {fileID: 0}
+    - target: {fileID: 6045099845819107363, guid: 469c07fcaa147fc41a8defb6d7d93ca1, type: 3}
+      propertyPath: myTargetResponder
+      value: 
+      objectReference: {fileID: 405583333}
     - target: {fileID: 6242939657001232865, guid: 469c07fcaa147fc41a8defb6d7d93ca1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -15.192

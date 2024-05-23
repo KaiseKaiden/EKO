@@ -6,8 +6,15 @@ public class Backpack : Responder
 {
     [SerializeField] GameObject myKeyPrefab;
 
-    public override void Respond()
+    public override bool Respond(Responder aResponder)
     {
+        if (this != aResponder)
+        {
+            // CANT USE HERE
+            return false;
+        }
+
         myKeyPrefab.transform.position = transform.position + transform.forward;
+        return true;
     }
 }

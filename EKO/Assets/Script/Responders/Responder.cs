@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Responder : MonoBehaviour
 {
-    public virtual void Respond()
+    public virtual bool Respond(Responder aResponder)
     {
-
+        return false;
     }
 }
