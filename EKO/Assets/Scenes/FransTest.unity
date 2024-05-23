@@ -1372,6 +1372,40 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8227972259472926355, guid: 78a7d346fcdf4af4abe58414a25a6fb8, type: 3}
   m_PrefabInstance: {fileID: 269796946}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &283209106
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 283209108}
+  m_Layer: 0
+  m_Name: Scroller
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &283209108
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 283209106}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1335218857}
+  - {fileID: 1215997258}
+  - {fileID: 1938929357}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &319956061
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5101,6 +5135,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 63525fcafb5f67146bd75f8797fc231a, type: 3}
   m_PrefabInstance: {fileID: 1188238630}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1215997257
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1215997258}
+  m_Layer: 0
+  m_Name: Location2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1215997258
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1215997257}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 4.0070667, y: 4.611602, z: -61.065372}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 283209108}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1229185918
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5988,6 +6053,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1112390249560066317, guid: 967678c2466d3cc479e8d094a19f7018, type: 3}
   m_PrefabInstance: {fileID: 1334605350}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1335218856
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1335218857}
+  m_Layer: 0
+  m_Name: Location1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1335218857
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1335218856}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 4.0070667, y: 4.611602, z: -61.065372}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 283209108}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1350085167
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8731,6 +8827,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1938929357}
+  - component: {fileID: 1938929358}
   m_Layer: 0
   m_Name: tunnel1
   m_TagString: Untagged
@@ -8756,8 +8853,32 @@ Transform:
   - {fileID: 1097905204}
   - {fileID: 840295572}
   - {fileID: 1820434657}
+<<<<<<< Updated upstream
   m_Father: {fileID: 913044060}
+=======
+  m_Father: {fileID: 283209108}
+>>>>>>> Stashed changes
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1938929358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1938929356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eda655cfc4290d44c902137002d77c85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  backdropPrefabs:
+  - {fileID: 20985741}
+  - {fileID: 807393749}
+  - {fileID: 1097905203}
+  - {fileID: 840295571}
+  scrollSpeed: 100
+  numBackdrops: 6
+  scrollDirection: {x: 0, y: 0, z: -100}
 --- !u!1001 &1940548391
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9695,4 +9816,8 @@ SceneRoots:
   - {fileID: 203754190}
   - {fileID: 1757424966}
   - {fileID: 664699522}
+<<<<<<< Updated upstream
   - {fileID: 913044060}
+=======
+  - {fileID: 283209108}
+>>>>>>> Stashed changes
