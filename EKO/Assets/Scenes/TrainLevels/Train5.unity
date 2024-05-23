@@ -4352,6 +4352,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8227972259472926355, guid: 78a7d346fcdf4af4abe58414a25a6fb8, type: 3}
   m_PrefabInstance: {fileID: 229127047}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &950114643
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: be539254d9ca44041be63262430c268a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -9.79977
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: be539254d9ca44041be63262430c268a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 8.969
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: be539254d9ca44041be63262430c268a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 12.85638
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: be539254d9ca44041be63262430c268a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7089216
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: be539254d9ca44041be63262430c268a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: be539254d9ca44041be63262430c268a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.70528734
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: be539254d9ca44041be63262430c268a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: be539254d9ca44041be63262430c268a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: be539254d9ca44041be63262430c268a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -89.706
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: be539254d9ca44041be63262430c268a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: be539254d9ca44041be63262430c268a, type: 3}
+      propertyPath: m_Name
+      value: MorseCodePoster
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: be539254d9ca44041be63262430c268a, type: 3}
 --- !u!1001 &972368581
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9307,3 +9364,4 @@ SceneRoots:
   - {fileID: 277930288}
   - {fileID: 1089156850}
   - {fileID: 634622373}
+  - {fileID: 950114643}
