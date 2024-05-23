@@ -14,12 +14,16 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] Animator myAnimator;
 
+    float myPositionY;
+
     void Start()
     {
         myCameraTransform = Camera.main.transform;
         myCharacterController = GetComponent<CharacterController>();
 
         myDeciredForward = transform.forward;
+
+        myPositionY = transform.position.y;
     }
 
     void Update()
@@ -47,6 +51,10 @@ public class PlayerMovement : MonoBehaviour
         {
             myDeciredForward = direction;
         }
+
+        Vector3 pos = transform.position;
+        pos.y = myPositionY;
+        transform.position = pos;
     }
 
     void Rotation()

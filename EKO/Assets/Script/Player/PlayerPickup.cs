@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class PlayerPickup : MonoBehaviour
 {
+    [SerializeField] Image myPaperImage;
+
     [SerializeField] Transform myHandTransform;
     Transform myCameraTransform;
     Transform myItemTransform;
@@ -68,6 +71,13 @@ public class PlayerPickup : MonoBehaviour
                 myItemTransform.rotation = myHandTransform.rotation;
 
                 myItemComponent.PickupItem();
+
+                // Paper Thangs
+                if (myItemComponent.GetImage() != null)
+                {
+                    myPaperImage.enabled = true;
+                    myPaperImage.sprite = myItemComponent.GetImage();
+                }
             }
         }
     }
@@ -80,5 +90,7 @@ public class PlayerPickup : MonoBehaviour
         myItemComponent = null;
         myItemTransform.SetParent(null);
         myItemTransform = null;
+
+        myPaperImage.enabled = false;
     }
 }
