@@ -1,14 +1,9 @@
 fileFormatVersion: 2
-guid: 85c576b584d0e92488df510b13f5e1a1
+guid: dc4e7fe0224c1c34e84306dc917b809d
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: standardSurface1
-    second: {fileID: 2100000, guid: d6f67f4f681ff7146b36ae04171f2ba4, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -96,7 +91,7 @@ ModelImporter:
     legStretch: 0.05
     feetSpacing: 0
     globalScale: 1
-    rootMotionBoneName: 
+    rootMotionBoneName: Reference
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
@@ -104,7 +99,7 @@ ModelImporter:
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 0
+  avatarSetup: 1
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   importBlendShapeDeformPercent: 1
   remapMaterialsIfMaterialImportModeIsNone: 0
