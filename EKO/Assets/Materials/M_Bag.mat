@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_Oilcan
+  m_Name: M_Bag
   m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -42,11 +42,11 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BaseMap:
-        m_Texture: {fileID: 2800000, guid: a0dd27f53db864b489788c8b0eb20f8a, type: 3}
+        m_Texture: {fileID: 2800000, guid: d68b096bc88867d409bb804449412aa7, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: 897bff61ce4a08a409e510c96e4161df, type: 3}
+        m_Texture: {fileID: 2800000, guid: f9e7fdf7d4a421f48ba6ac7fe79ee7ba, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -66,11 +66,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: a0dd27f53db864b489788c8b0eb20f8a, type: 3}
+        m_Texture: {fileID: 2800000, guid: d68b096bc88867d409bb804449412aa7, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
-        m_Texture: {fileID: 2800000, guid: 746406170137b024ba947c5fbc5ed832, type: 3}
+        m_Texture: {fileID: 2800000, guid: d7b43b098b6b4b14cba2f14519bc36ed, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
