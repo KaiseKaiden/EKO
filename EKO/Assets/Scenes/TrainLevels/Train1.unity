@@ -5781,6 +5781,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d97899674435dd4ab27ed42e4cf0693, type: 3}
+--- !u!4 &1275767578 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 708581495453317648, guid: 5e8d283884edc7440a9d63e7f0184c7d, type: 3}
+  m_PrefabInstance: {fileID: 855511035}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1292465850
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7556,6 +7561,14 @@ PrefabInstance:
     - target: {fileID: 2982592541569852285, guid: d2e0a9aa02092b44b8515ed92060a7c1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3202945292896803144, guid: d2e0a9aa02092b44b8515ed92060a7c1, type: 3}
+      propertyPath: myTargetTransform
+      value: 
+      objectReference: {fileID: 1275767578}
+    - target: {fileID: 3202945292896803144, guid: d2e0a9aa02092b44b8515ed92060a7c1, type: 3}
+      propertyPath: myInteractDistance
+      value: 1.75
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9424,6 +9437,7 @@ GameObject:
   - component: {fileID: 3080524070231595105}
   - component: {fileID: 3806844807465289299}
   - component: {fileID: 7211547155818035894}
+  - component: {fileID: 7211547155818035895}
   m_Layer: 0
   m_Name: Bag
   m_TagString: Untagged
@@ -9444,6 +9458,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myKeyPrefab: {fileID: 1749144769}
+--- !u!65 &7211547155818035895
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7211547155818035893}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.022197727, y: 0.02, z: 0.02725677}
+  m_Center: {x: 0.000001772199, y: 0, z: 0.0036283839}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

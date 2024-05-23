@@ -48,9 +48,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 935381c72ac077342a4dc845d2560672, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 37b6ff42070de6549bc67e0f581beb3a, type: 2}
     - target: {fileID: 919132149155446097, guid: 935381c72ac077342a4dc845d2560672, type: 3}
       propertyPath: m_Name
-      value: MetroDoors (4)
+      value: MetroDoors
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
