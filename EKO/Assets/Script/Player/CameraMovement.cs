@@ -86,7 +86,7 @@ public class CameraMovement : MonoBehaviour
 
         RaycastHit hit;
 
-        if (Physics.Raycast(transform.parent.transform.position + centerPosition, -transform.forward, out hit, myMaxCameraDistance, myCameraLayer))
+        if (Physics.Raycast(transform.parent.transform.position + centerPosition, -transform.forward, out hit, myMaxCameraDistance, myCameraLayer, QueryTriggerInteraction.Ignore))
         {
             myDeciredDistance = hit.distance;
             if (myCurrentDistance > myDeciredDistance)

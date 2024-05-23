@@ -27,6 +27,11 @@ public class SceneLoaderOnTrigger : MonoBehaviour
         }
     }
 
+    public void RestartScene()
+    {
+        StartCoroutine(LoadCurrentScene());
+    }
+
     IEnumerator LoadScene()
     {
         if (Application.CanStreamedLevelBeLoaded(sceneToLoad))
@@ -44,6 +49,27 @@ public class SceneLoaderOnTrigger : MonoBehaviour
         else
         {
             Debug.LogWarning("Scene " + sceneToLoad + " cannot be loaded. Please check the scene name and ensure it is added to the Build Settings.");
+        }
+
+    }
+
+    IEnumerator LoadCurrentScene()
+    {
+        if (Application.CanStreamedLevelBeLoaded(SceneManager.GetActiveScene().name))
+        {
+            transitionCanvas.SetActive(true);
+            transitionAnimator.SetBool("TriggerBlackFade", true);
+
+            yield return new WaitForSeconds(0.9f);
+
+            transitionAnimator.SetBool("TriggerBlackFade", false);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            transitionCanvas.SetActive(false);
+        }
+
+        else
+        {
+            Debug.LogWarning("Scene " + SceneManager.GetActiveScene().name + " cannot be loaded. Please check the scene name and ensure it is added to the Build Settings.");
         }
 
     }
