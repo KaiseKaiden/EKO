@@ -411,9 +411,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myCameraSpeed: 360
-  myMaxCameraDistance: 2
-  myRightDistance: 0.7
-  myUpDistance: 1.5
+  myMaxCameraDistance: 0.8
+  myRightDistance: 0.6
+  myUpDistance: 1.7
   myClampAngle: 80
   myCameraLayer:
     serializedVersion: 2
