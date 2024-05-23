@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class Item : MonoBehaviour
 {
+    [SerializeField] Image myImage;
+
     [SerializeField] Transform myTargetTransform;
     [SerializeField] float myInteractDistance;
     float myInteractDistanceSqr;
@@ -57,6 +60,11 @@ public class Item : MonoBehaviour
     public void PickupItem()
     {
         myRigidbody.isKinematic = true;
+    }
+
+    public Image GetImage()
+    {
+        return myImage;
     }
 
     private void OnCollisionEnter(Collision collision)
