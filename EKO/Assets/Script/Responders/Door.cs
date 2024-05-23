@@ -6,8 +6,16 @@ public class Door : Responder
 {
     [SerializeField] private Animator animDoor = null;
 
-    public override void Respond()
+    public override bool Respond(Responder aResponder)
     {
+        if (this != aResponder)
+        {
+            // CANT USE THIS HERE
+
+            return false;
+        }
+
         animDoor.SetTrigger("Open");
+        return true;
     }
 }
