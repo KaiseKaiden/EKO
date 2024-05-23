@@ -10,6 +10,8 @@ public class CameraMovement : MonoBehaviour
     [SerializeField] float myRightDistance;
     [SerializeField] float myUpDistance;
     [SerializeField] float myClampAngle;
+    [SerializeField] float myOffsetMax;
+    [SerializeField] float myOffsetSpeed;
 
     [SerializeField] LayerMask myCameraLayer;
 
@@ -18,6 +20,9 @@ public class CameraMovement : MonoBehaviour
 
     float lookX;
     float lookY;
+
+    Vector2 perlinX;
+    Vector2 perlinY;
 
     public enum eState
     {
@@ -62,6 +67,8 @@ public class CameraMovement : MonoBehaviour
 
             Vector3 centerPosition = Vector3.up * myUpDistance + transform.right * myRightDistance;
             transform.localPosition = centerPosition - transform.forward * myCurrentDistance;
+
+            NoiceOffset();
         }
         else
         {
@@ -93,5 +100,16 @@ public class CameraMovement : MonoBehaviour
         }
 
         myCurrentDistance = Mathf.Lerp(myCurrentDistance, myDeciredDistance, 2.0f * Time.deltaTime);
+    }
+
+    void NoiceOffset()
+    {
+        perlinX += Vector2.right * myOffsetSpeed * Time.deltaTime;
+        perlinY += Vector2.up * myOffsetSpeed * Time.deltaTime;
+
+        float sampleX = Mathf.PerlinNoise(perlinX.x, perlinX.y);
+        float sampleY = Mathf.PerlinNoise(perlinY.x, perlinY.y);
+
+        transform.Rotate(new Vector3(sampleX, sampleY, 0.0f) * myOffsetMax);
     }
 }
