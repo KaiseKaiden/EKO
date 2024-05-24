@@ -43,7 +43,9 @@ public class Item : MonoBehaviour
                     if (responder.Respond(myTargetResponder, this))
                     {
                         Destroy(gameObject);
+
                         AudioHandler.Instance.PlaySound("useitem");
+                        
                         return true;
                     }
                 }
@@ -56,13 +58,22 @@ public class Item : MonoBehaviour
     public void DropItem()
     {
         myRigidbody.isKinematic = false;
-        AudioHandler.Instance.PlaySound("dropitem");
+        if (myImage != null)
+        {
+            AudioHandler.Instance.PlaySound("notedrop");
+        }
+        else AudioHandler.Instance.PlaySound("dropitem");
     }
 
     public void PickupItem()
     {
         myRigidbody.isKinematic = true;
-        AudioHandler.Instance.PlaySound("pickup");
+
+        if (myImage != null)
+        {
+            AudioHandler.Instance.PlaySound("note");
+        }
+        else AudioHandler.Instance.PlaySound("pickup");
     }
 
     public Sprite GetImage()
