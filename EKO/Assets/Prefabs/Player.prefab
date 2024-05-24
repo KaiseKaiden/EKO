@@ -139,6 +139,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myPaperImage: {fileID: 9205938785787399960}
+  myAnimator: {fileID: 669879808113079675}
   myHandTransform: {fileID: 858938889941791768}
   myItemLayer:
     serializedVersion: 2
