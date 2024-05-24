@@ -18,6 +18,8 @@ public class SquiddyJumpscare : MonoBehaviour
         {
             myPlayerMovement.SetCanMove(false);
             mySquiddyJumpscare.SetActive(true);
+ 	AudioHandler.Instance.PlaySound("jumpscare2");
+
         }
     }
 }
