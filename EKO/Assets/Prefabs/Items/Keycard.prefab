@@ -147,3 +147,5 @@ MonoBehaviour:
   myTargetResponder: {fileID: 0}
   myTargetTransform: {fileID: 0}
   myInteractDistance: 0
+  myPositionOffset: {x: 0.1, y: 0.01, z: 0}
+  myRotationOffset: {x: 90, y: 0, z: 0}

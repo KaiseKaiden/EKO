@@ -99,6 +99,8 @@ MonoBehaviour:
   myTargetResponder: {fileID: 0}
   myTargetTransform: {fileID: 0}
   myInteractDistance: 2
+  myPositionOffset: {x: 0.2, y: 0.01, z: 0.3}
+  myRotationOffset: {x: 0, y: 90, z: -90}
 --- !u!1001 &5096629388269773123
 PrefabInstance:
   m_ObjectHideFlags: 0

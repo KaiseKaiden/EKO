@@ -8,6 +8,7 @@ using Unity.Burst.CompilerServices;
 public class PlayerPickup : MonoBehaviour
 {
     [SerializeField] GameObject myPickup;
+    [SerializeField] Text myClueText;
     [SerializeField] GameObject myUse;
 
     [SerializeField] Image myPaperImage;
@@ -19,6 +20,7 @@ public class PlayerPickup : MonoBehaviour
     Item myItemComponent;
 
     [SerializeField] LayerMask myItemLayer;
+    [SerializeField] LayerMask myEverythingLayer;
     [SerializeField] float myInteractRange;
     float myInteractRangeSqr;
 
@@ -34,18 +36,23 @@ public class PlayerPickup : MonoBehaviour
     void Update()
     {
         myPickup.SetActive(false);
+        myClueText.enabled = false;
         myUse.SetActive(false);
-        if (!myInHand)
+
+        if (!ReciverIndicator())
         {
-            PickupIndicator();
-        }
-        else
-        {
-            if (myItemComponent)
+            if (!myInHand)
             {
-                if (myItemComponent.ShowIndicator())
+                PickupIndicator();
+            }
+            else
+            {
+                if (myItemComponent)
                 {
-                    myUse.SetActive(true);
+                    if (myItemComponent.ShowIndicator())
+                    {
+                        myUse.SetActive(true);
+                    }
                 }
             }
         }
@@ -79,16 +86,39 @@ public class PlayerPickup : MonoBehaviour
 
     void PickupIndicator()
     {
-        if (Physics.Raycast(myCameraTransform.position, myCameraTransform.forward, myInteractRange, myItemLayer))
+        if (Physics.Raycast(myCameraTransform.position, myCameraTransform.forward, myInteractRange, myItemLayer, QueryTriggerInteraction.Ignore))
         {
             myPickup.SetActive(true);
         }
     }
 
+    bool ReciverIndicator()
+    {
+        RaycastHit hit;
+        if (Physics.Raycast(myCameraTransform.position, myCameraTransform.forward, out hit, myInteractRange, myEverythingLayer, QueryTriggerInteraction.Ignore))
+        {
+            Responder responder;
+            if (hit.transform.TryGetComponent<Responder>(out responder))
+            {
+                if (responder.GetIsDone())
+                {
+                    return false;
+                }
+
+                myClueText.text = responder.GetClue();
+                myClueText.enabled = true;
+
+                return true;
+            }
+        }
+
+        return false;
+    }
+
     void Pickup()
     {
         RaycastHit hit;
-        if (Physics.Raycast(myCameraTransform.position, myCameraTransform.forward, out hit, myItemLayer))
+        if (Physics.Raycast(myCameraTransform.position, myCameraTransform.forward, out hit, myInteractRange, myItemLayer, QueryTriggerInteraction.Ignore))
         {
             float distanceSqr = (hit.point - transform.position).sqrMagnitude;
             if (distanceSqr > myInteractRangeSqr)
@@ -103,21 +133,34 @@ public class PlayerPickup : MonoBehaviour
                 myItemTransform = hit.transform;
                 myInHand = true;
 
-                myItemTransform.SetParent(myHandTransform);
-                myItemTransform.position = myHandTransform.position;
-                myItemTransform.rotation = myHandTransform.rotation;
-
-                myItemComponent.PickupItem();
-
                 myAnimator.SetTrigger("Interact");
 
-                // Paper Thangs
-                if (myItemComponent.GetImage() != null)
                 {
-                    myPaperImage.enabled = true;
-                    myPaperImage.sprite = myItemComponent.GetImage();
+                    PlayerMovement movement = gameObject.GetComponent<PlayerMovement>();
+                    movement.SetCanMove(false);
+
+                    Vector3 lookDir = (myItemTransform.position - transform.position);
+                    lookDir.y = 0.0f;
+                    movement.SetDeciredForward(lookDir.normalized);
                 }
             }
+        }
+    }
+
+    public void PickemUp()
+    {
+        myItemTransform.SetParent(myHandTransform);
+        myItemTransform.position = myHandTransform.position;
+        myItemTransform.localPosition = myItemComponent.GetPositionOffset();
+        myItemTransform.localEulerAngles = myItemComponent.GetRotationOffset();
+
+        myItemComponent.PickupItem();
+
+        // Paper Thangs
+        if (myItemComponent.GetImage() != null)
+        {
+            myPaperImage.enabled = true;
+            myPaperImage.sprite = myItemComponent.GetImage();
         }
     }
 

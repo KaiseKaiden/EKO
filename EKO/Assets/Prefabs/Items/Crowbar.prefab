@@ -96,8 +96,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myImage: {fileID: 0}
+  myTargetResponder: {fileID: 0}
   myTargetTransform: {fileID: 0}
   myInteractDistance: 1.5
+  myRotationOffset: {x: -90, y: 0, z: 0}
 --- !u!1001 &8467946854425294480
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -181,5 +183,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myImage: {fileID: 0}
+  myTargetResponder: {fileID: 0}
   myTargetTransform: {fileID: 0}
   myInteractDistance: 0
+  myRotationOffset: {x: 0, y: 0, z: 0}

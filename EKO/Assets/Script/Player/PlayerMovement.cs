@@ -38,12 +38,13 @@ public class PlayerMovement : MonoBehaviour
         if (myCanMove)
         {
             Movement();
-            Rotation();
         }
         else
         {
             myAnimator.SetFloat("movement", 0.0f);
         }
+
+        Rotation();
     }
 
     void Movement()
@@ -69,6 +70,11 @@ public class PlayerMovement : MonoBehaviour
         Vector3 pos = transform.position;
         pos.y = myPositionY;
         transform.position = pos;
+    }
+
+    public void SetDeciredForward(Vector3 aForward)
+    {
+        myDeciredForward = aForward;
     }
 
     void Rotation()

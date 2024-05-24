@@ -4235,7 +4235,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1998669543757579929, guid: e34f1a2f8a9693d4ba4cffa33768605a, type: 3}
       propertyPath: myCode
-      value: 012
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1998669543757579929, guid: e34f1a2f8a9693d4ba4cffa33768605a, type: 3}
       propertyPath: myResponder

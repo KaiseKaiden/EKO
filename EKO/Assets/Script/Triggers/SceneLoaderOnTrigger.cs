@@ -10,11 +10,17 @@ public class SceneLoaderOnTrigger : MonoBehaviour
     [SerializeField] Animator transitionAnimator;
     [SerializeField] GameObject transitionCanvas;
 
+    [SerializeField] bool myDontFadeIn;
+
+    [SerializeField] LoadScene myloadScene;
 
     private void Awake()
     {
         transitionAnimator = transitionCanvas.GetComponentInChildren<Animator>();
-        StartCoroutine(TransitionWhite());
+        if (myDontFadeIn)
+        {
+            transitionAnimator.SetBool("startFade", false);
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -22,30 +28,23 @@ public class SceneLoaderOnTrigger : MonoBehaviour
         // Check if the object entering the collider has the tag "Player"
         if (other.CompareTag("Player"))
         {
-            StartCoroutine(LoadScene());
+            LoadScene();
             
         }
     }
 
     public void RestartScene()
     {
-        StartCoroutine(LoadCurrentScene());
+        LoadCurrentScene();
     }
 
-    IEnumerator LoadScene()
+    void LoadScene()
     {
         if (Application.CanStreamedLevelBeLoaded(sceneToLoad))
         {
-            transitionCanvas.SetActive(true);
-            transitionAnimator.SetBool("TriggerBlackFade", true);
-
-            yield return new WaitForSeconds(0.9f);
-
-            transitionAnimator.SetBool("TriggerBlackFade", false);
-            SceneManager.LoadScene(sceneToLoad);
-            transitionCanvas.SetActive(false);
+            transitionAnimator.SetTrigger("Fade");
+            myloadScene.SetSceneToLoad(sceneToLoad);
         }
-
         else
         {
             Debug.LogWarning("Scene " + sceneToLoad + " cannot be loaded. Please check the scene name and ensure it is added to the Build Settings.");
@@ -53,18 +52,12 @@ public class SceneLoaderOnTrigger : MonoBehaviour
 
     }
 
-    IEnumerator LoadCurrentScene()
+    void LoadCurrentScene()
     {
         if (Application.CanStreamedLevelBeLoaded(SceneManager.GetActiveScene().name))
         {
-            transitionCanvas.SetActive(true);
-            transitionAnimator.SetBool("TriggerBlackFade", true);
-
-            yield return new WaitForSeconds(0.9f);
-
-            transitionAnimator.SetBool("TriggerBlackFade", false);
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-            transitionCanvas.SetActive(false);
+            transitionAnimator.SetTrigger("Fade");
+            myloadScene.SetSceneToLoad(SceneManager.GetActiveScene().name);
         }
         else
         {
@@ -72,16 +65,4 @@ public class SceneLoaderOnTrigger : MonoBehaviour
         }
 
     }
-
-    IEnumerator TransitionWhite()
-    {
-        transitionCanvas.SetActive(true);
-        transitionAnimator.SetBool("TriggerWhiteFade",true);
-
-        yield return new WaitForSeconds(0.9f);
-
-        transitionAnimator.SetBool("TriggerWhiteFade", false);
-        transitionCanvas.SetActive(false);
-    }
-
 }

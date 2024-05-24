@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 8315206641846670663}
   - component: {fileID: 935107186484147217}
   - component: {fileID: 4761691591509286702}
+  - component: {fileID: 1555049029231620486}
   m_Layer: 0
   m_Name: MorsePaper
   m_TagString: Untagged
@@ -100,6 +101,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myStaticCameraTransform: {fileID: 8774651692041524967}
+--- !u!114 &1555049029231620486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5001253181077129342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17c61fb2079d3b046b1cbbfa5f2b6b5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myClue: Left click to inspect
 --- !u!1001 &2601272420661221433
 PrefabInstance:
   m_ObjectHideFlags: 0

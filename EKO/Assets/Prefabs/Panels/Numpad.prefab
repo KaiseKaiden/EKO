@@ -676,6 +676,7 @@ GameObject:
   - component: {fileID: 317950649546380831}
   - component: {fileID: 1998669543757579929}
   - component: {fileID: 1946171261353274594}
+  - component: {fileID: 2775112758787065309}
   m_Layer: 0
   m_Name: Numpad
   m_TagString: Untagged
@@ -760,6 +761,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2775112758787065309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1548566697079952096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17c61fb2079d3b046b1cbbfa5f2b6b5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myClue: Left click to use
 --- !u!1 &1664511603931085534
 GameObject:
   m_ObjectHideFlags: 0

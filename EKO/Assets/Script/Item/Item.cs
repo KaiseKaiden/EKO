@@ -11,9 +11,10 @@ public class Item : MonoBehaviour
     [SerializeField] float myInteractDistance;
     float myInteractDistanceSqr;
 
-    Transform myCameraTransform;
+    [SerializeField] Vector3 myPositionOffset;
+    [SerializeField] Vector3 myRotationOffset;
 
-    bool myIsDropping;
+    Transform myCameraTransform;
 
     Rigidbody myRigidbody;
 
@@ -24,6 +25,16 @@ public class Item : MonoBehaviour
         myInteractDistanceSqr = myInteractDistance * myInteractDistance;
 
         myRigidbody = GetComponent<Rigidbody>();
+    }
+
+    public Vector3 GetRotationOffset()
+    {
+        return myRotationOffset;
+    }
+
+    public Vector3 GetPositionOffset()
+    {
+        return myPositionOffset;
     }
 
     public bool ShowIndicator()

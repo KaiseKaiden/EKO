@@ -15,6 +15,7 @@ public class Door : Responder
             return false;
         }
 
+        SetIsDone(true);
         animDoor.SetTrigger("Open");
         AudioHandler.Instance.PlaySound("DoorOpen");
         return true;

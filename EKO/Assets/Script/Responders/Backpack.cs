@@ -14,6 +14,7 @@ public class Backpack : Responder
             return false;
         }
 
+        SetIsDone(true);
         myKeyPrefab.transform.position = transform.position + transform.forward;
         return true;
     }

@@ -5639,14 +5639,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 886274743}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -14.732, y: 7.927, z: 14.959}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 327918400}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!4 &891577879 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8227972259472926355, guid: 78a7d346fcdf4af4abe58414a25a6fb8, type: 3}
@@ -8626,15 +8626,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7548078430360819095, guid: dc4e7fe0224c1c34e84306dc917b809d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 2.2344325
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -7548078430360819095, guid: dc4e7fe0224c1c34e84306dc917b809d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -63.099396
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: -7548078430360819095, guid: dc4e7fe0224c1c34e84306dc917b809d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -124.16469
+      value: -85.29963
       objectReference: {fileID: 0}
     - target: {fileID: -945011919071131149, guid: dc4e7fe0224c1c34e84306dc917b809d, type: 3}
       propertyPath: m_IsActive
@@ -8654,15 +8654,15 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: d532b0321964a8b499dcb69042d4d3e2, type: 2}
     - target: {fileID: 8017153832991449368, guid: dc4e7fe0224c1c34e84306dc917b809d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -86.495026
+      value: -85.29963
       objectReference: {fileID: 0}
     - target: {fileID: 8017153832991449368, guid: dc4e7fe0224c1c34e84306dc917b809d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -90
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 8017153832991449368, guid: dc4e7fe0224c1c34e84306dc917b809d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 180
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9011,6 +9011,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1442c3544ef2ab347a2ce6ef0979204b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myClue: Looks like its missing some parts
   myOilAnimation: {fileID: 886274743}
   myLever: {fileID: 227196312}
   myOilItem: {fileID: 836750864}
@@ -10539,13 +10540,58 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 34631641773646642, guid: e022eb54186634344900fe491b8e17d2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 283559838}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e022eb54186634344900fe491b8e17d2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1643553931}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e022eb54186634344900fe491b8e17d2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1643553930}
   m_SourcePrefab: {fileID: 100100000, guid: e022eb54186634344900fe491b8e17d2, type: 3}
 --- !u!4 &1643553928 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e022eb54186634344900fe491b8e17d2, type: 3}
   m_PrefabInstance: {fileID: 1643553927}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1643553929 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: e022eb54186634344900fe491b8e17d2, type: 3}
+  m_PrefabInstance: {fileID: 1643553927}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1643553930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1643553929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17c61fb2079d3b046b1cbbfa5f2b6b5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myClue: He's sleeping
+--- !u!65 &1643553931
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1643553929}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 2.5, z: 1}
+  m_Center: {x: 0, y: 1.25, z: 0}
 --- !u!4 &1661304215 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1950715105387539941, guid: 6d97899674435dd4ab27ed42e4cf0693, type: 3}

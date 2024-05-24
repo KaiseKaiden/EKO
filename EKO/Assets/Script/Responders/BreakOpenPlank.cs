@@ -15,6 +15,7 @@ public class BreakOpenPlank : Responder
             return false;
         }
 
+        SetIsDone(true);
         myCrowbar.SetActive(true);
         return true;
     }

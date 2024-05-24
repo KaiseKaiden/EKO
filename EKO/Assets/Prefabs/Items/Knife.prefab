@@ -99,8 +99,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myImage: {fileID: 0}
+  myTargetResponder: {fileID: 0}
   myTargetTransform: {fileID: 0}
   myInteractDistance: 0
+  myRotationOffset: {x: -180, y: 90, z: -90}
 --- !u!54 &1803590187509228551
 Rigidbody:
   m_ObjectHideFlags: 0
