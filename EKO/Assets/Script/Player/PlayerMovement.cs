@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    bool myCanMove = true;
+
     [SerializeField] float myWalkingSpeed;
     [SerializeField] float myRotationSpeed;
 
@@ -26,10 +28,22 @@ public class PlayerMovement : MonoBehaviour
         myPositionY = transform.position.y;
     }
 
+    public void SetCanMove(bool aCanMove)
+    {
+        myCanMove = aCanMove;
+    }
+
     void Update()
     {
-        Movement();
-        Rotation();
+        if (myCanMove)
+        {
+            Movement();
+            Rotation();
+        }
+        else
+        {
+            myAnimator.SetFloat("movement", 0.0f);
+        }
     }
 
     void Movement()
