@@ -55,7 +55,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: be23a95ed39a48f429665805c751dfc4, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
-      objectReference: {fileID: 2100000, guid: 76ee9027267996143b7a6630a29b233e, type: 2}
+      objectReference: {fileID: 2100000, guid: c935a9513bf0a8649a2c7facb6dcacef, type: 2}
     - target: {fileID: 919132149155446097, guid: be23a95ed39a48f429665805c751dfc4, type: 3}
       propertyPath: m_Name
       value: Keycard

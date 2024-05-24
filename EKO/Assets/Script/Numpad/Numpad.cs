@@ -56,7 +56,7 @@ public class Numpad : MonoBehaviour
                 Exit();
 
                 myLampMeshRenderer.material = mySuccessMaterial;
-                myResponder.Respond(myResponder);
+                myResponder.Respond(myResponder, new Item());
             }
         }
         else
