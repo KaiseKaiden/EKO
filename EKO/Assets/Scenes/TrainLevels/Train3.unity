@@ -5283,6 +5283,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MetroEnd
       objectReference: {fileID: 0}
+    - target: {fileID: 5892940815137925990, guid: 5e8d283884edc7440a9d63e7f0184c7d, type: 3}
+      propertyPath: sceneToLoad
+      value: Train5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
