@@ -29,5 +29,6 @@ public class NumpadButton : MonoBehaviour
         myNumpad.SendNumber(myIndex);
 
         transform.localPosition = new Vector3(myStartPosition.x, myStartPosition.y, 0.0f);
+        AudioHandler.Instance.PlaySound("keyinput");
     }
 }
