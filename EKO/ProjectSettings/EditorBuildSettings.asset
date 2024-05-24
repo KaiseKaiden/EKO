@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Menu.unity
     guid: 66f2b1272b598e24fb24f22630ba73bb
   - enabled: 1
@@ -17,7 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TrainLevels/Train3.unity
     guid: f005895939025f04ba1b00b6a33e9f9e
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/TrainLevels/Train4.unity
     guid: c798f0c6a5f3de746b10bb62e90ff68a
   - enabled: 1
@@ -31,5 +31,5 @@ EditorBuildSettings:
     guid: cc28d2715a2230d4d981e42fff63bb36
   - enabled: 1
     path: Assets/Scenes/TrainLevels/Train8.unity
-    guid: b790c7ba86aac124993f4bc468dffa37
+    guid: b86b001c819156e4cb7597831c45d7ff
   m_configObjects: {}
