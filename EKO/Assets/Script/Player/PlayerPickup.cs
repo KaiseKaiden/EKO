@@ -3,9 +3,13 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine.UI;
 using UnityEngine;
+using Unity.Burst.CompilerServices;
 
 public class PlayerPickup : MonoBehaviour
 {
+    [SerializeField] GameObject myPickup;
+    [SerializeField] GameObject myUse;
+
     [SerializeField] Image myPaperImage;
     [SerializeField] Animator myAnimator;
 
@@ -29,9 +33,25 @@ public class PlayerPickup : MonoBehaviour
 
     void Update()
     {
+        myPickup.SetActive(false);
+        myUse.SetActive(false);
+        if (!myInHand)
+        {
+            PickupIndicator();
+        }
+        else
+        {
+            if (myItemComponent)
+            {
+                if (myItemComponent.ShowIndicator())
+                {
+                    myUse.SetActive(true);
+                }
+            }
+        }
+
         if (Input.GetButtonDown("Interact"))
         {
-            
             if (!myInHand)
             {
                 Pickup();
@@ -40,11 +60,28 @@ public class PlayerPickup : MonoBehaviour
             {
                 if (myItemComponent)
                 {
-                    myItemComponent.UseItem();
+                    if (myItemComponent.UseItem())
+                    {
+                        myInHand = false;
+                    }
                 }
+            }
+        }
 
+        if (Input.GetButtonDown("Release"))
+        {
+            if (myInHand)
+            {
                 Putdown();
             }
+        }
+    }
+
+    void PickupIndicator()
+    {
+        if (Physics.Raycast(myCameraTransform.position, myCameraTransform.forward, myInteractRange, myItemLayer))
+        {
+            myPickup.SetActive(true);
         }
     }
 

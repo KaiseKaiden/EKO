@@ -26,6 +26,32 @@ public class Item : MonoBehaviour
         myRigidbody = GetComponent<Rigidbody>();
     }
 
+    public bool ShowIndicator()
+    {
+        RaycastHit hit;
+        if (Physics.Raycast(myCameraTransform.position, myCameraTransform.forward, out hit))
+        {
+            Responder responder;
+            if (hit.transform.TryGetComponent<Responder>(out responder))
+            {
+                if (myTargetResponder == responder)
+                {
+
+                    Vector3 playerPos = transform.position;
+                    playerPos.y = myCameraTransform.position.y;
+
+                    float distanceSqr = (playerPos - hit.point).sqrMagnitude;
+                    if (distanceSqr < myInteractDistanceSqr)
+                    {
+                        return true;
+                    }
+                }
+            }
+        }
+
+        return false;
+    }
+
     public bool UseItem()
     {
         RaycastHit hit;
