@@ -6859,7 +6859,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myStartPos: {x: -12.75, y: 5, z: -1}
   myEndPos: {x: -12.75, y: 7, z: -1}
-  myTimeTilDeath: 30
+  myTimeTilDeath: 60
   mySceneLoaderOnTrigger: {fileID: 1749779087}
 --- !u!4 &1481175365 stripped
 Transform:
@@ -7473,23 +7473,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8776641020765126378, guid: f999fde421ac52e4ab1b788fe62bea63, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -15.375402
+      value: -10.545
       objectReference: {fileID: 0}
     - target: {fileID: 8776641020765126378, guid: f999fde421ac52e4ab1b788fe62bea63, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.6705513
+      value: 8.405
       objectReference: {fileID: 0}
     - target: {fileID: 8776641020765126378, guid: f999fde421ac52e4ab1b788fe62bea63, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 15.086583
+      value: 10.122
       objectReference: {fileID: 0}
     - target: {fileID: 8776641020765126378, guid: f999fde421ac52e4ab1b788fe62bea63, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.9247113
       objectReference: {fileID: 0}
     - target: {fileID: 8776641020765126378, guid: f999fde421ac52e4ab1b788fe62bea63, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8776641020765126378, guid: f999fde421ac52e4ab1b788fe62bea63, type: 3}
       propertyPath: m_LocalRotation.y
@@ -7497,7 +7497,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8776641020765126378, guid: f999fde421ac52e4ab1b788fe62bea63, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0.38066933
       objectReference: {fileID: 0}
     - target: {fileID: 8776641020765126378, guid: f999fde421ac52e4ab1b788fe62bea63, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -7509,7 +7509,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8776641020765126378, guid: f999fde421ac52e4ab1b788fe62bea63, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 44.75
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8663,7 +8663,7 @@ PrefabInstance:
     - target: {fileID: 2753843681177478567, guid: 85c01d7400e051f48a8428b8abd5058c, type: 3}
       propertyPath: myImage
       value: 
-      objectReference: {fileID: 21300000, guid: 6d6e20efd82eee444b419f77a454667b, type: 3}
+      objectReference: {fileID: 21300000, guid: dc408001f406c62468c3a9f56f7f6acf, type: 3}
     - target: {fileID: 5071594332252989118, guid: 85c01d7400e051f48a8428b8abd5058c, type: 3}
       propertyPath: m_Name
       value: Paper
