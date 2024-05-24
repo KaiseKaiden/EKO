@@ -21,6 +21,8 @@ public class Lever : Responder
         if (aItem == myOilItem)
         {
             myOilAnimation.SetActive(true);
+            AudioHandler.Instance.PlaySound("oilcan");
+
         }
         else if (aItem == myLeverItem)
         {
