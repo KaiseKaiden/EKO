@@ -7,6 +7,7 @@ using UnityEngine;
 public class PlayerPickup : MonoBehaviour
 {
     [SerializeField] Image myPaperImage;
+    [SerializeField] Animator myAnimator;
 
     [SerializeField] Transform myHandTransform;
     Transform myCameraTransform;
@@ -33,7 +34,6 @@ public class PlayerPickup : MonoBehaviour
             
             if (!myInHand)
             {
-                
                 Pickup();
             }
             else
@@ -71,6 +71,8 @@ public class PlayerPickup : MonoBehaviour
                 myItemTransform.rotation = myHandTransform.rotation;
 
                 myItemComponent.PickupItem();
+
+                myAnimator.SetTrigger("Interact");
 
                 // Paper Thangs
                 if (myItemComponent.GetImage() != null)
