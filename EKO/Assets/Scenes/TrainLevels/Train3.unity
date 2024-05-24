@@ -1763,6 +1763,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myLeverAnimator: {fileID: 227196315}
+  mySkinnedMesh: {fileID: 1054585519}
 --- !u!1001 &329825741
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6354,6 +6355,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 1950715105387539941, guid: 6d97899674435dd4ab27ed42e4cf0693, type: 3}
   m_PrefabInstance: {fileID: 420284501}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &1054585519 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -435407616430645924, guid: dc4e7fe0224c1c34e84306dc917b809d, type: 3}
+  m_PrefabInstance: {fileID: 1372942495}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1075373800 stripped
 Transform:

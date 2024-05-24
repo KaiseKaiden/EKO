@@ -7,6 +7,7 @@ public class LeverDone : MonoBehaviour
     int myDone;
 
     [SerializeField] Animator myLeverAnimator;
+    [SerializeField] SkinnedMeshRenderer mySkinnedMesh;
 
     public void Done()
     {
@@ -16,5 +17,10 @@ public class LeverDone : MonoBehaviour
         {
             myLeverAnimator.SetTrigger("Pull");
         }
+    }
+
+    public void OilDone()
+    {
+        mySkinnedMesh.enabled = false;
     }
 }
